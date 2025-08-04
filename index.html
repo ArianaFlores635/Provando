@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 Feliz Cumpleaños 🎉</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="titulo">¡Feliz Cumpleaños! 🎂</h1>
+    <p class="mensaje">Hoy es un día especial para celebrar tu vida, tus sueños y tu corazón tan bonito 💖</p>
+    <p id="sorpresa" class="oculto">🎈 ¡Te deseo un año lleno de magia, risas y amor! ✨</p>
+  </div>
+
+  <div class="globos">
+    <div class="globo"></div>
+    <div class="globo"></div>
+    <div class="globo"></div>
+  </div>
+
+  <script>
+    const boton = document.getElementById("boton");
+    const sorpresa = document.getElementById("sorpresa");
+
+    boton.addEventListener("click", () => {
+      sorpresa.classList.remove("oculto");
+    });
+  </script>
+</body>
+</html>
