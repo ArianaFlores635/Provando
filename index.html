@@ -1,30 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>🎉 Feliz Cumpleaños 🎉</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages y Visual Studio Code</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #1abc9c, #3498db);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Menú de navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Encabezado */
+        header {
+            padding: 100px 20px 40px;
+            text-align: center;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        header h1 {
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        /* Contenido */
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        section {
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            color: #ffeb3b;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li::before {
+            content: "✔ ";
+            color: #ffeb3b;
+        }
+
+        /* Curiosidades */
+        .curiosidades {
+            background: rgba(255,255,255,0.15);
+            border-left: 5px solid #ffeb3b;
+            padding: 10px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0,0,0,0.3);
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="titulo">¡Feliz Cumpleaños! 🎂</h1>
-    <p class="mensaje">Hoy es un día especial para celebrar tu vida, tus sueños y tu corazón tan bonito 💖</p>
-    <p id="sorpresa" class="oculto">🎈 ¡Te deseo un año lleno de magia, risas y amor! ✨</p>
-  </div>
 
-  <div class="globos">
-    <div class="globo"></div>
-    <div class="globo"></div>
-    <div class="globo"></div>
-  </div>
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#github">GitHub Pages</a>
+        <a href="#vscode">Visual Studio Code</a>
+        <a href="#pasos">Pasos</a>
+        <a href="#ventajas">Ventajas</a>
+        <a href="#curiosidades">Curiosidades</a>
+    </nav>
 
-  <script>
-    const boton = document.getElementById("boton");
-    const sorpresa = document.getElementById("sorpresa");
+    <!-- Encabezado -->
+    <header>
+        <h1>GitHub Pages & Visual Studio Code</h1>
+        <p>Herramientas para crear y publicar tu propia página web gratis</p>
+    </header>
 
-    boton.addEventListener("click", () => {
-      sorpresa.classList.remove("oculto");
-    });
-  </script>
+    <main>
+        <section id="github">
+            <h2>¿Qué es GitHub Pages?</h2>
+            <p>Es un servicio gratuito de GitHub que te permite publicar páginas web directamente desde tus repositorios.</p>
+        </section>
+
+        <section id="vscode">
+            <h2>¿Qué es Visual Studio Code?</h2>
+            <p>Es un editor de texto para programar, ligero y personalizable, ideal para trabajar con HTML, CSS, JavaScript y muchos otros lenguajes.</p>
+        </section>
+
+        <section id="pasos">
+            <h2>Pasos para Usarlos Juntos</h2>
+            <ol>
+                <li>Diseña tu página en Visual Studio Code.</li>
+                <li>Guárdala en una carpeta organizada.</li>
+                <li>Sube la carpeta a GitHub en un repositorio.</li>
+                <li>Activa la opción <strong>Pages</strong> en GitHub.</li>
+                <li>Obtén el enlace para compartir tu web.</li>
+            </ol>
+        </section>
+
+        <section id="ventajas">
+            <h2>Ventajas</h2>
+            <ul>
+                <li>Gratis y fácil de usar.</li>
+                <li>Permite mostrar trabajos en línea.</li>
+                <li>Ideal para portafolios o prácticas.</li>
+            </ul>
+        </section>
+
+        <section id="curiosidades" class="curiosidades">
+            <h2>💡 Curiosidades</h2>
+            <p>🔹 GitHub Pages fue lanzado en 2008 y es usado por millones de desarrolladores para mostrar sus proyectos.</p>
+            <p>🔹 Visual Studio Code es el editor de código más usado del mundo según encuestas de Stack Overflow.</p>
+            <p>🔹 Con GitHub Pages puedes incluso hacer blogs usando generadores como Jekyll sin gastar un centavo.</p>
+            <p>🔹 VS Code tiene una mascota oficial: un perrito robot llamado <em>Paw-some</em>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hecho con ❤️ usando HTML, CSS y un poco de magia | 2025</p>
+    </footer>
+
+    <script>
+        // Efecto de aparición al hacer scroll
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            sections.forEach(sec => {
+                const secTop = sec.getBoundingClientRect().top;
+                if (secTop < window.innerHeight - 100) {
+                    sec.classList.add('show');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+   
