@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Pages y Visual Studio Code</title>
     <style>
-        /* Estilos generales */
+        /* Reset y estilo general */
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +13,7 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(120deg, #1abc9c, #3498db);
+            background: linear-gradient(120deg, #f8bbd0, #ce93d8);
             color: #fff;
             overflow-x: hidden;
         }
@@ -46,6 +46,10 @@
             padding: 100px 20px 40px;
             text-align: center;
             animation: fadeInDown 1s ease-in-out;
+        }
+        header img {
+            width: 80px;
+            margin: 10px;
         }
         header h1 {
             font-size: 2.8rem;
@@ -92,6 +96,17 @@
             font-style: italic;
         }
 
+        /* Imágenes */
+        .imagen {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .imagen img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+        }
+
         /* Footer */
         footer {
             background: rgba(0,0,0,0.3);
@@ -120,13 +135,14 @@
     <nav>
         <a href="#github">GitHub Pages</a>
         <a href="#vscode">Visual Studio Code</a>
-        <a href="#pasos">Pasos</a>
-        <a href="#ventajas">Ventajas</a>
+        <a href="#ventajas">Ventajas y Desventajas</a>
         <a href="#curiosidades">Curiosidades</a>
     </nav>
 
     <!-- Encabezado -->
     <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Logo GitHub">
+        <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="Logo VS Code">
         <h1>GitHub Pages & Visual Studio Code</h1>
         <p>Herramientas para crear y publicar tu propia página web gratis</p>
     </header>
@@ -134,31 +150,37 @@
     <main>
         <section id="github">
             <h2>¿Qué es GitHub Pages?</h2>
-            <p>Es un servicio gratuito de GitHub que te permite publicar páginas web directamente desde tus repositorios.</p>
+            <p>Es un servicio gratuito de GitHub que permite publicar páginas web directamente desde tus repositorios en la nube, ideal para proyectos escolares, portafolios o sitios informativos.</p>
+            <div class="imagen">
+                <img src="https://miro.medium.com/v2/resize:fit:1200/1*O0G5v1Y1qN4E4n3nWRcA1A.png" alt="Ejemplo GitHub Pages">
+            </div>
         </section>
 
         <section id="vscode">
             <h2>¿Qué es Visual Studio Code?</h2>
-            <p>Es un editor de texto para programar, ligero y personalizable, ideal para trabajar con HTML, CSS, JavaScript y muchos otros lenguajes.</p>
-        </section>
-
-        <section id="pasos">
-            <h2>Pasos para Usarlos Juntos</h2>
-            <ol>
-                <li>Diseña tu página en Visual Studio Code.</li>
-                <li>Guárdala en una carpeta organizada.</li>
-                <li>Sube la carpeta a GitHub en un repositorio.</li>
-                <li>Activa la opción <strong>Pages</strong> en GitHub.</li>
-                <li>Obtén el enlace para compartir tu web.</li>
-            </ol>
+            <p>Es un editor de texto y código muy popular, rápido, personalizable y compatible con muchos lenguajes de programación, ideal para diseñar páginas web.</p>
+            <div class="imagen">
+                <img src="https://code.visualstudio.com/assets/home/home-screenshot-mac-2x.png" alt="Ejemplo VS Code">
+            </div>
         </section>
 
         <section id="ventajas">
-            <h2>Ventajas</h2>
+            <h2>Ventajas y Desventajas</h2>
+            <h3>GitHub</h3>
             <ul>
-                <li>Gratis y fácil de usar.</li>
-                <li>Permite mostrar trabajos en línea.</li>
-                <li>Ideal para portafolios o prácticas.</li>
+                <li>✅ Guarda proyectos en la nube.</li>
+                <li>✅ Facilita el trabajo en equipo.</li>
+                <li>✅ Control de cambios automático.</li>
+                <li>❌ Requiere internet para sincronizar.</li>
+                <li>❌ Puede ser confuso al inicio.</li>
+            </ul>
+            <h3>Visual Studio Code</h3>
+            <ul>
+                <li>✅ Gratis y ligero.</li>
+                <li>✅ Personalizable con extensiones.</li>
+                <li>✅ Detecta errores en tiempo real.</li>
+                <li>❌ Puede ponerse lento con muchas extensiones.</li>
+                <li>❌ No es 100% amigable para principiantes.</li>
             </ul>
         </section>
 
@@ -166,17 +188,17 @@
             <h2>💡 Curiosidades</h2>
             <p>🔹 GitHub Pages fue lanzado en 2008 y es usado por millones de desarrolladores para mostrar sus proyectos.</p>
             <p>🔹 Visual Studio Code es el editor de código más usado del mundo según encuestas de Stack Overflow.</p>
-            <p>🔹 Con GitHub Pages puedes incluso hacer blogs usando generadores como Jekyll sin gastar un centavo.</p>
+            <p>🔹 Con GitHub Pages puedes hacer blogs usando Jekyll sin gastar dinero.</p>
             <p>🔹 VS Code tiene una mascota oficial: un perrito robot llamado <em>Paw-some</em>.</p>
         </section>
     </main>
 
     <footer>
-        <p>Hecho con ❤️ usando HTML, CSS y un poco de magia | 2025</p>
+        <p>Hecho con ❤️ usando HTML, CSS y JavaScript | 2025</p>
     </footer>
 
+    <!-- Script para efecto de aparición -->
     <script>
-        // Efecto de aparición al hacer scroll
         const sections = document.querySelectorAll('section');
         window.addEventListener('scroll', () => {
             sections.forEach(sec => {
@@ -187,6 +209,37 @@
             });
         });
     </script>
+
+    <!-- Script de confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        function lanzarConfeti() {
+            const end = Date.now() + 3 * 1000; // 3 segundos de confeti
+            const colores = ['#ff80ab', '#ba68c8'];
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: colores
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: colores
+                });
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        // Lanza confeti al cargar la página
+        window.onload = lanzarConfeti;
+    </script>
 </body>
 </html>
-   
