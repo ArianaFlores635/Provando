@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Pages y Visual Studio Code</title>
     <style>
-        /* Estilos generales */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,8 +12,6 @@
             color: #fff;
             overflow-x: hidden;
         }
-
-        /* Menú de navegación */
         nav {
             position: fixed;
             top: 0;
@@ -34,8 +31,6 @@
             transition: color 0.3s;
         }
         nav a:hover { color: #fff; }
-
-        /* Encabezado */
         header {
             padding: 100px 20px 40px;
             text-align: center;
@@ -50,11 +45,9 @@
             text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         }
         header p { font-size: 1.2rem; margin-top: 10px; }
-
-        /* Nombres de los autores */
         .autores {
             margin-top: 15px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: #ffe57f;
             animation: flotar 3s ease-in-out infinite;
@@ -67,9 +60,7 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
         }
-
-        /* Secciones */
-        main { max-width: 900px; margin: auto; padding: 20px; }
+        main { max-width: 1000px; margin: auto; padding: 20px; }
         section {
             background: rgba(255, 255, 255, 0.1);
             margin-bottom: 30px;
@@ -85,24 +76,18 @@
         h3 { margin-top: 15px; color: #ffe57f; }
         ul { list-style: none; }
         ul li::before { content: "✔ "; color: #ffeb3b; }
-
-        /* Imagenes */
         .imagen { text-align: center; margin: 15px 0; }
         .imagen img {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
         }
-
-        /* Curiosidades */
         .curiosidades {
             background: rgba(255,255,255,0.15);
             border-left: 5px solid #ffeb3b;
             padding: 10px;
             font-style: italic;
         }
-
-        /* Footer */
         footer {
             background: rgba(0,0,0,0.3);
             text-align: center;
@@ -110,17 +95,66 @@
             font-size: 0.9rem;
             margin-top: 20px;
         }
-
-        /* Animaciones */
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        /* Línea de tiempo */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #ffe57f;
+        }
+        .timeline-item {
+            margin-bottom: 20px;
+        }
+        .timeline-item h4 {
+            margin-bottom: 5px;
+            color: #ffe57f;
+        }
+        /* Tarjetas interactivas */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .card {
+            background: rgba(255,255,255,0.15);
+            flex: 1 1 calc(50% - 15px);
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.4s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.25);
+        }
+        /* Botón */
+        .btn {
+            display: inline-block;
+            background: #ffeb3b;
+            color: #000;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #ffd600;
+        }
     </style>
 </head>
 <body>
-
-    <!-- Menú -->
     <nav>
         <a href="#github">GitHub Pages</a>
         <a href="#vscode">Visual Studio Code</a>
@@ -129,28 +163,20 @@
         <a href="#curiosidades">Curiosidades</a>
     </nav>
 
-    <!-- Encabezado -->
     <header>
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Logo GitHub">
         <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="Logo VS Code">
         <h1>GitHub Pages & Visual Studio Code</h1>
         <p>La combinación perfecta para crear y publicar tu propia página web gratis</p>
         <div class="autores">
-            Lideny Flores • Caren Rodriguez • Mauricio Maradiaga
+            Presentado por los alumnos: Lideny Flores • Caren Rodriguez • Mauricio Maradiaga
         </div>
     </header>
 
     <main>
         <section id="github">
             <h2>¿Qué es GitHub Pages?</h2>
-            <p>GitHub Pages es un servicio gratuito que te permite alojar sitios web directamente desde un repositorio en GitHub. Es muy útil para mostrar trabajos escolares, portafolios profesionales o páginas personales sin pagar hosting.</p>
-            <p>Algunos usos comunes son:</p>
-            <ul>
-                <li>Mostrar proyectos y tareas escolares.</li>
-                <li>Publicar un portafolio en línea.</li>
-                <li>Crear blogs estáticos con Jekyll.</li>
-                <li>Presentar documentación de proyectos.</li>
-            </ul>
+            <p>GitHub Pages es un servicio gratuito que te permite alojar sitios web directamente desde un repositorio en GitHub...</p>
             <div class="imagen">
                 <img src="https://miro.medium.com/v2/resize:fit:1200/1*O0G5v1Y1qN4E4n3nWRcA1A.png" alt="Ejemplo GitHub Pages">
             </div>
@@ -158,56 +184,84 @@
 
         <section id="vscode">
             <h2>¿Qué es Visual Studio Code?</h2>
-            <p>Visual Studio Code (VS Code) es un editor de código desarrollado por Microsoft. Es gratuito, rápido, personalizable y compatible con múltiples lenguajes como HTML, CSS, JavaScript, Python, C++ y más.</p>
-            <p>Sus características más destacadas incluyen:</p>
-            <ul>
-                <li>Resaltado de sintaxis y autocompletado inteligente.</li>
-                <li>Extensiones para agregar nuevas funciones.</li>
-                <li>Integración con Git y GitHub.</li>
-                <li>Soporte para depuración y control de versiones.</li>
-            </ul>
+            <p>Visual Studio Code (VS Code) es un editor de código desarrollado por Microsoft...</p>
             <div class="imagen">
                 <img src="https://code.visualstudio.com/assets/home/home-screenshot-mac-2x.png" alt="Ejemplo VS Code">
             </div>
         </section>
 
         <section id="pasos">
-            <h2>Cómo Usarlos Juntos</h2>
-            <ol>
-                <li>Diseña tu página web en Visual Studio Code usando HTML, CSS y JavaScript.</li>
-                <li>Guarda todos los archivos en una carpeta organizada.</li>
-                <li>Sube la carpeta a un repositorio en GitHub.</li>
-                <li>Activa la opción <strong>GitHub Pages</strong> en la configuración del repositorio.</li>
-                <li>Obtén el enlace para compartir tu web con el mundo.</li>
-            </ol>
+            <h2>Cómo Usarlos Juntos - Línea de Tiempo</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Paso 1</h4>
+                    <p>Diseñar tu página en VS Code.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Paso 2</h4>
+                    <p>Guardar los archivos en una carpeta organizada.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Paso 3</h4>
+                    <p>Subir la carpeta a un repositorio de GitHub.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Paso 4</h4>
+                    <p>Activar GitHub Pages en la configuración.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Paso 5</h4>
+                    <p>Compartir el enlace con todos.</p>
+                </div>
+            </div>
         </section>
 
         <section id="ventajas">
             <h2>Ventajas y Desventajas</h2>
-            <h3>GitHub</h3>
-            <ul>
-                <li>✅ Guarda proyectos en la nube y evita pérdidas.</li>
-                <li>✅ Facilita el trabajo en equipo.</li>
-                <li>✅ Control de cambios y versiones.</li>
-                <li>❌ Requiere internet para subir cambios.</li>
-                <li>❌ Puede ser confuso para principiantes.</li>
-            </ul>
-            <h3>Visual Studio Code</h3>
-            <ul>
-                <li>✅ Gratuito y ligero.</li>
-                <li>✅ Personalizable con miles de extensiones.</li>
-                <li>✅ Detecta errores mientras escribes.</li>
-                <li>❌ Puede volverse lento con muchas extensiones.</li>
-                <li>❌ No incluye compilador para algunos lenguajes.</li>
-            </ul>
+            <div class="cards">
+                <div class="card">
+                    <h3>Ventajas de GitHub</h3>
+                    <ul>
+                        <li>Guarda proyectos en la nube.</li>
+                        <li>Facilita el trabajo en equipo.</li>
+                        <li>Control de cambios y versiones.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Desventajas de GitHub</h3>
+                    <ul>
+                        <li>Requiere internet para sincronizar.</li>
+                        <li>Puede ser confuso para principiantes.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Ventajas de VS Code</h3>
+                    <ul>
+                        <li>Gratis y personalizable.</li>
+                        <li>Detecta errores en tiempo real.</li>
+                        <li>Compatible con muchos lenguajes.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Desventajas de VS Code</h3>
+                    <ul>
+                        <li>Pierde rendimiento con muchas extensiones.</li>
+                        <li>No incluye compilador para todos los lenguajes.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="curiosidades" class="curiosidades">
             <h2>💡 Curiosidades</h2>
-            <p>🔹 GitHub Pages fue lanzado en 2008 y desde entonces millones de desarrolladores lo usan para publicar proyectos.</p>
-            <p>🔹 Visual Studio Code es el editor más usado según encuestas globales de desarrolladores.</p>
-            <p>🔹 Puedes hacer un blog completo gratis usando GitHub Pages y Jekyll.</p>
-            <p>🔹 El logotipo de GitHub es un gato pulpo llamado "Octocat".</p>
+            <p>GitHub Pages fue lanzado en 2008...</p>
+            <p>Visual Studio Code es el editor más usado según encuestas globales...</p>
+            <p>El logotipo de GitHub es un gato pulpo llamado "Octocat".</p>
+        </section>
+
+        <section>
+            <h2>Descarga un Ejemplo</h2>
+            <a href="#" class="btn">📥 Descargar Proyecto</a>
         </section>
     </main>
 
@@ -215,7 +269,6 @@
         <p>Hecho con ❤️ usando HTML, CSS y JavaScript | 2025</p>
     </footer>
 
-    <!-- Efecto aparición -->
     <script>
         const sections = document.querySelectorAll('section');
         window.addEventListener('scroll', () => {
@@ -227,14 +280,11 @@
             });
         });
     </script>
-
-    <!-- Confeti morado y rosado -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
         function lanzarConfeti() {
             const end = Date.now() + 3 * 1000;
             const colores = ['#ff80ab', '#ba68c8'];
-
             (function frame() {
                 confetti({
                     particleCount: 5,
@@ -250,9 +300,7 @@
                     origin: { x: 1 },
                     colors: colores
                 });
-                if (Date.now() < end) {
-                    requestAnimationFrame(frame);
-                }
+                if (Date.now() < end) requestAnimationFrame(frame);
             }());
         }
         window.onload = lanzarConfeti;
